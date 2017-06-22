@@ -1,0 +1,67 @@
+body {
+    margin: 0; /*enlever les marges autour des photos*/
+}
+header {
+    overflow: auto;
+
+}
+
+a 
+    {
+        color: #123;
+        text-decoration: none;
+        
+    }
+
+
+nav {
+    float: right;
+    margin-right: 15px;
+
+}
+
+ul  {
+    margin:0;
+ 
+}
+
+li  {
+
+display: inline-block;
+list-style-image: url(); /*mettre une puce spéciale au menu*/
+
+}
+
+nav li{
+    margin:0;
+    display: inline-block;
+    list-style: none;  /*enlever les points noire sur la liste*/
+    margin-right: 10px;
+
+}
+div i.glyphicon {
+
+}
+
+
+.logo {
+    width: 200px;
+    height: 50px;
+    overflow: hidden;
+    background: url(../initial/image/car.png); /*en chemin relatif*/
+    background-repeat: no-repeat; /*repeat-x, repeat Z, no repeat*, cover sur les photos de profils*/
+    background-size: contain; 
+    float: left;
+}
+.col-moitie {
+    width: 50%;
+    float: left;
+}
+/*overflow décrit les comprtements que les elements dépassent en cours*/
+/*clear: both; annules les flottants précédents*/
+.square {
+    width: 200px;
+    height: 200px;
+    border: 5px solid red;
+    border-radius: 100px;
+}

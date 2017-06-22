@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+     <script src="../js/jquery-3.2.1.min.js"></script>
+
+
+    <script>
+        
+
+jQuery('.links a').css('backgroundColor', 'red')
+$('.links a').css('backgroundColor', 'red')
+
+
+// un autre exo
+$(document).ready(function(){
+    $("button.cacher").click(function(){
+        $("p").hide();
+});
+
+$("button.afficher").click(function(){
+        $("p").show();
+});
+
+$("button.toggle").click(function() {
+    $("section").toggle("slow");
+});
+});
+
+//$("section").fadeOut(5000).delay(300).fadeIn(5000);
+        
+//});
+
+//function FaireClignoterImage ()
+//{ 
+// $("#monImage").fadeOut(5000).delay(300).fadeIn(5000);
+//}
+
+// un autre exo, cocher decocher magasin
+
+    
+
+
+    </script>
+</head>
+<body>
+
+<style>
+    .mauvais{
+        color:red;
+
+    }
+
+    .mauvais-message {
+        background-color:red;
+    }
+
+
+</style>
+
+
+
+
+
+
+    <h2>Heading de la page</h2>
+    <p>Mon paragraphe</p>
+    <button class="cacher"> click </button>
+    <button class="afficher"> show </button>
+    <button class="toggle"></button>
+    <section>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <div>
+            <img id ="monImage" src="../image/logo.png">
+        </div>
+        <div>
+        <input id="checkAll" type="checkbox">
+        <ul id="magazine">
+            <li><input type="checkbox">Mag1</li>
+            <li><input type="checkbox">Mag2</li>
+            <li><input type="checkbox">Mag3</li>
+            <li><input type="checkbox">Mag4</li>
+        </ul> 
+        </div>
+        <form>
+            <textarea id="message" name="message" cols="120" rows="10"></textarea>
+            <p id="compteur"> 0 mots | 0 Caractere / 200 </p>
+        </form>
+     </section>
+</body>
+<footer>
+</footer>
+
+
+<script type="text/javascript">
+    $("#checkAll").click(function() {
+    var magazines=$("#magazine").find(":checkbox");
+        if(this.checked){
+                magazines.prop("checked", true);
+        } else {magazines.prop("checked", false);
+    }
+});
+    //un autre exo
+
+
+$('#message').keyup(function(){
+     var nombreCaractere = $(this).val().length;
+
+     var nombreMots = jQuery.trim($(this).val()).split(' ').length;
+
+     if($(this).val() === ' ') {
+          nombreMots = 0;
+     }
+     var msg = ' ' + nombreMots + 'mot(s) | ' + nombreCaractere + 'Caractere(s) / 200';
+
+     $('#compteur').text(msg);
+
+     if (nombreCaractere > 200) {
+        $('#compteur').addClass("mauvais");
+        $('#message').addClass("mauvais-message");
+     }else{
+        $('#message').removeClass("mauvais-message");
+        $('#compteur').removeClass("mauvais");
+     }
+});
+</script>
+   
+       
+</html>
